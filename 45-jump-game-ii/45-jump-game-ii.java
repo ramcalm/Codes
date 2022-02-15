@@ -12,7 +12,7 @@ class Solution {
         if(dp[index]!=null)
             return dp[index];
         
-        int min= Integer.MAX_VALUE/2;
+        int min= Integer.MAX_VALUE/2 +5;
         for(int i=1;i<=nums[index];i++){
             min=Math.min(min, 1+helper(nums, index+i, dp));
         }
