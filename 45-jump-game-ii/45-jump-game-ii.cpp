@@ -7,7 +7,7 @@ public:
         }
         if(i>n) return 0;
         if(dp[i]!=-1) return dp[i];
-        int c = INT_MAX-2;
+        int c = INT_MAX-1;
         for(int j=1;j<=nums[i];j++){
             c = min(c,1+solve(nums,i+j,n));
         }
