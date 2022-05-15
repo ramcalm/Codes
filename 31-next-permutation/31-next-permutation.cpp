@@ -7,7 +7,7 @@ public:
         if(i<0)
             return reverse(nums.begin(),nums.end());
         int j=nums.size()-1;
-        while(j>=0 && nums[j]<=nums[i])
+        while(j>i && nums[j]<=nums[i])
             j--;
         swap(nums[i],nums[j]);
         reverse(nums.begin()+i+1,nums.end());
