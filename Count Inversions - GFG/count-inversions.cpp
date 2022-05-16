@@ -39,10 +39,7 @@ class Solution{
         if(l>=r)
             return 0;
         int mid=l + (r-l)/2;
-        long long int inv=solve(arr,l,mid);
-        inv+=solve(arr,mid+1,r);
-        inv+=merge(arr,l,mid,r);
-        return inv;
+        return solve(arr,l,mid)+solve(arr,mid+1,r)+merge(arr,l,mid,r);
     }
     
     long long int inversionCount(long long arr[], long long N)
